@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
+	<link rel="stylesheet" type="text/css" href="resources/styles/main.css">
+	<script src="https://kit.fontawesome.com/50af6a73d2.js" crossorigin="anonymous"></script>
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+	<script
+		src="https://code.jquery.com/jquery-3.5.0.min.js"
+		integrity="sha256-xNzN2a4ltkB44Mc/Jz3pT4iU1cmeR0FkXs4pru/JxaQ="
+		crossorigin="anonymous"></script>
+	<title>Contact | Btw&Co Consulting</title>
+</head>
+<body>
+	<div id="nav">
+		<ul>
+			<li class="has-text-white">
+				<div>Menu</div>
+				<a href="aboutus.html" class="has-text-white"><span>Menu</span></a>
+			<li>
+				<div><i class="fas fa-home"></i></div>
+				<a href="index.html" class="has-text-white"><span><i class="fas fa-home"></i></span></a>
+			</li>
+			<li class="has-text-white">
+				<div class="active">Contact</div>
+				<a href="contact.html" class="has-text-white"><span>Contact</span></a>
+			</li>
+		</ul>
+	</div>
+
+	<div class="container my-6 pb-6 is-hidden-mobile">
+		<div class="grd45deg" style="border-radius: 25px;">
+			<div id="grd2" class="projectbox py-6" style="box-shadow: none;border-radius: 25px;">
+			<div class="columns">
+				<div class="column is-3 has-text-centered">
+					<img src="resources/imgs/boxes.png">
+				</div>
+				<div class="column is-1"></div>
+
+				<!-- START 1ST SCREEN -->
+				<div class="column is-8" id="stscreen">
+					<div style="display:flex;flex-direction: column;justify-content: space-between;height: 100%;">
+						<b class="has-text-white">Dites en nous un peu plus sur vous ...</b>
+						<div class="columns">
+							<div class="column is-5">
+								<fieldset class='float-label-field'>
+								  <label for="nom">Nom</label>
+								  <input id="nom" type='text'>
+								</fieldset><fieldset class='float-label-field'>
+								  <label for="email">E-mail</label>
+								  <input id="email" type='text'>
+								</fieldset><fieldset class='float-label-field'>
+								  <label for="site">Site internet existant</label>
+								  <input id="site" type='text'>
+								</fieldset>
+							</div>
+							<div class="column is-2"></div>
+							<div class="column is-5">
+								<fieldset class='float-label-field'>
+								  <label for="societe">Société</label>
+								  <input id="societe" type='text'>
+								</fieldset><fieldset class='float-label-field'>
+								  <label for="tel">Téléphone</label>
+								  <input id="tel" type='text'>
+								</fieldset><fieldset class='float-label-field'>
+								  <label for="concurent">Concurent principal</label>
+								  <input id="concurent" type='text'>
+								</fieldset>
+							</div>
+						</div>
+						<div class="has-text-centered">
+							<div style="position:relative;">
+				  				<div class="button px-5 is-rounded gradientbtn active">
+				  					<b class="has-text-white">Continuer</b>
+				  				</div>
+				  				<div class="button px-5 is-rounded gradientbtn grdbtn" onclick="document.getElementById('stscreen').style.display='none';document.getElementById('ndscreen').style.display='block';";>
+				  					<b class="has-text-white">Continuer</b>
+				  				</div>
+			  				</div>
+						</div>
+					</div>
+				  	<img src="resources/imgs/lefthigh.png" style="position:absolute;right: 10%;margin-top: -20px;">
+				</div>
+				<!-- END 1ST SCREEN -->
+
+				<!-- START 2ND SCREEN -->
+				<div class="column is-8" style="display:none" id="ndscreen">
+					<div style="display:flex;flex-direction: column;justify-content: space-between;height: 100%;">
+						<b class="has-text-white">Parlez nous de votre projet</b>
+						<div class="columns">
+							<div class="column is-half">
+								<input type="checkbox" name="">
+									<label class="has-text-white">Site internet</label><br>
+								<input type="checkbox" name="">
+									<label class="has-text-white">SEO</label><br>
+								<input type="checkbox" name="">
+									<label class="has-text-white">Maintenance</label>
+							</div>
+							<div class="column is-half">
+								<input type="checkbox" name="">
+									<label class="has-text-white">Brand Identity</label><br>
+								<input type="checkbox" name="">
+									<label class="has-text-white">Logo</label><br>
+								<input type="checkbox" name="">
+									<label class="has-text-white">Autre</label>
+							</div>
+						</div>
+						<b class="has-text-white">Fixons une date</b>
+						<div class="columns">
+							<div class="column is-half">
+								<fieldset class='float-label-field'>
+								  <label for="debut">Date idéal de debut</label>
+								  <input id="debut" type='Text' onfocus="(this.type='date')" onblur="(this.type='text')">
+								</fieldset>
+							</div>
+							<div class="column is-half">
+								<fieldset class='float-label-field'>
+								  <label for="fin">Date idéal de fin</label>
+								  <input id="fin" type='text' onfocus="(this.type='date')" onblur="(this.type='text')">
+								</fieldset>
+							</div>
+						</div>
+						<div class="has-text-centered">
+							<div style="position:relative;">
+				  				<div class="button px-5 is-rounded gradientbtn active">
+				  					<b class="has-text-white">Continuer</b>
+				  				</div>
+				  				<div class="button px-5 is-rounded gradientbtn grdbtn"  onclick="document.getElementById('ndscreen').style.display='none';document.getElementById('rdscreen').style.display='block';";>
+				  					<b class="has-text-white">Continuer</b>
+				  				</div>
+			  				</div>
+						</div>
+					</div>
+				  	<img src="resources/imgs/rotatedrighthand.png" style="position:absolute;right: 45%;margin-top: -5vh;">
+				</div>
+				<!-- END 2ND SCREEN -->
+
+				<!-- START 3RD SCREEN -->
+				<div class="column is-8" style="display:none" id="rdscreen">
+					<div style="display:flex;flex-direction: column;justify-content: space-between;height: 100%;">
+						<b class="has-text-white">Quelque chose à ajouter ?</b>
+						<div class="control">
+						  <textarea class="textarea has-fixed-size" placeholder="Autre chose que nous devrions savoir ?"></textarea>
+						</div>
+
+						<b class="has-text-white">Parlons budget</b>
+
+						<div class="columns">
+							<div class="column is-half">
+								<input type="checkbox" name="">
+									<label class="has-text-white">Je ne suis pas sûre</label><br>
+								<input type="checkbox" name="">
+									<label class="has-text-white">1000-5000€</label><br>
+								<input type="checkbox" name="">
+									<label class="has-text-white">10000-20000€</label>
+							</div>
+							<div class="column is-half">
+								<input type="checkbox" name="">
+									<label class="has-text-white">0-1000€</label><br>
+								<input type="checkbox" name="">
+									<label class="has-text-white">5000-10000€</label><br>
+								<input type="checkbox" name="">
+									<label class="has-text-white">+ 20000€</label>
+							</div>
+						</div>
+
+						<div class="has-text-centered">
+							<div style="position:relative;">
+				  				<div class="button px-5 is-rounded gradientbtn active">
+				  					<b class="has-text-white">Valider</b>
+				  				</div>
+				  				<div class="button px-5 is-rounded gradientbtn grdbtn">
+				  					<b class="has-text-white">Valider</b>
+				  				</div>
+			  				</div>
+						</div>
+					</div>
+				</div>
+				<!-- END 3RD SCREEN -->
+
+			</div>
+		</div>
+		</div>
+	</div>
+
+	<div class="vignette contactmobile is-hidden-tablet">
+		<div class="grd135deg">
+			<div class="mobilecontactcontent p-3">
+				<!-- 1ST MOBILE SCREEN -->
+				<div id="stmbscreen">
+					<b class="has-text-white is-size-5">Dites en nous un peu plus sur vous ...</b>
+					<fieldset class='float-label-field'>
+					  <label for="nommb" onclick="document.getElementById('nommb').focus()">Nom</label>
+					  <input id="nommb" type='text'>
+					</fieldset><fieldset class='float-label-field'>
+					  <label for="emailmb" onclick="document.getElementById('emailmb').focus()">E-mail</label>
+					  <input id="emailmb" type='text'>
+					</fieldset><fieldset class='float-label-field'>
+					  <label for="sitemb" onclick="document.getElementById('sitemb').focus()">Site internet existant</label>
+					  <input id="sitemb" type='text'>
+					</fieldset>
+					<fieldset class='float-label-field'>
+					  <label for="societemb" onclick="document.getElementById('societemb').focus()">Société</label>
+					  <input id="societemb" type='text'>
+					</fieldset><fieldset class='float-label-field'>
+					  <label for="telmb" onclick="document.getElementById('telmb').focus()">Téléphone</label>
+					  <input id="telmb" type='text'>
+					</fieldset><fieldset class='float-label-field'>
+					  <label for="concurentmb" onclick="document.getElementById('concurentmb').focus()">Concurent principal</label>
+					  <input id="concurentmb" type='text'>
+					</fieldset>
+
+					<div class="has-text-centered py-6">
+						<div style="position:relative;">
+			  				<div class="button px-5 is-rounded gradientbtn active">
+			  					<b class="has-text-white">Continuer</b>
+			  				</div>
+			  				<div class="button px-5 is-rounded gradientbtn grdbtn" onclick="document.getElementById('stmbscreen').style.display='none';document.getElementById('ndmbscreen').style.display='block';";>
+			  					<b class="has-text-white">Continuer</b>
+			  				</div>
+		  				</div>
+					<img src="resources/imgs/lefthigh.png" style="width: 30vw;position: absolute;right:5vw;">
+					</div>
+				</div>
+				<!-- 1ST MOBILE SCREEN -->
+				<!-- 2ND MOBILE SCREEN -->
+				<div id="ndmbscreen" style="display:none">
+					<b class="has-text-white is-size-5">Parlez nous de votre projet</b>
+					<div class="my-3">
+						<input type="checkbox" name="">
+							<label class="has-text-white">Site internet</label><br>
+						<input type="checkbox" name="">
+							<label class="has-text-white">SEO</label><br>
+						<input type="checkbox" name="">
+							<label class="has-text-white">Maintenance</label><br>
+							<input type="checkbox" name="">
+							<label class="has-text-white">Brand Identity</label><br>
+						<input type="checkbox" name="">
+							<label class="has-text-white">Logo</label><br>
+						<input type="checkbox" name="">
+							<label class="has-text-white">Autre</label>
+					</div>
+					<b class="has-text-white is-size-5">Fixons une date</b>
+					<fieldset class='float-label-field'>
+					  <label for="debut" onclick="document.getElementById('debutmobile').focus()">Date idéal de debut</label>
+					  <input id="debutmobile" type='Text' onfocus="(this.type='date')" onblur="(this.type='text')">
+					</fieldset>
+					<fieldset class='float-label-field'>
+					  <label for="fin">Date idéal de fin</label>
+					  <input id="fin" type='text' onfocus="(this.type='date')" onblur="(this.type='text')">
+					</fieldset>
+					<div class="has-text-centered py-6">
+						<div style="position:relative;">
+			  				<div class="button px-5 is-rounded gradientbtn active">
+			  					<b class="has-text-white">Continuer</b>
+			  				</div>
+			  				<div class="button px-5 is-rounded gradientbtn grdbtn" onclick="document.getElementById('ndmbscreen').style.display='none';document.getElementById('rdmbscreen').style.display='block';";>
+			  					<b class="has-text-white">Continuer</b>
+			  				</div>
+		  				</div>
+					<img src="resources/imgs/righthand.png" style="width: 30vw;position: absolute;left:5vw;">
+					</div>
+				</div>
+				<!-- 2ND MOBILE SCREEN -->
+				<!-- 3RD MOBILE SCREEN -->
+				<div id="rdmbscreen" style="display:none">
+					<b class="has-text-white is-size-5">Quelque chose à ajouter ?</b>
+						<div class="control py-3">
+						  <textarea class="textarea has-fixed-size" placeholder="Autre chose que nous devrions savoir ?"></textarea>
+						</div>
+					<b class="has-text-white is-size-5">Parlons Budget</b>
+					<div class="py-3">
+						<input type="checkbox" name="">
+							<label class="has-text-white">Je ne suis pas sûre</label><br>
+						<input type="checkbox" name="">
+							<label class="has-text-white">1000-5000€</label><br>
+						<input type="checkbox" name="">
+							<label class="has-text-white">10000-20000€</label><br>
+						<input type="checkbox" name="">
+							<label class="has-text-white">0-1000€</label><br>
+						<input type="checkbox" name="">
+							<label class="has-text-white">5000-10000€</label><br>
+						<input type="checkbox" name="">
+							<label class="has-text-white">+ 20000€</label>
+					</div>
+					<div class="has-text-centered py-6">
+						<div style="position:relative;">
+			  				<div class="button px-5 is-rounded gradientbtn active">
+			  					<b class="has-text-white">Valider</b>
+			  				</div>
+			  				<div class="button px-5 is-rounded gradientbtn grdbtn">
+			  					<b class="has-text-white">Valider</b>
+			  				</div>
+		  				</div>
+					<img src="resources/imgs/lefthigh.png" style="width: 30vw;position: absolute;right:5vw;">
+					</div>
+				</div>
+				<!-- 3RD MOBILE SCREEN -->
+			</div>
+			<div class="container p-4 has-text-centered">
+				<img src="resources/imgs/boxes.png" style="width: 50vw;">
+			</div>
+		</div>
+	</div>
+
+	<footer class="footer has-text-centered has-text-white pt-5 pb-2">
+	 	<span class="gradient-word socials">
+	 		<i class="fab fa-github"></i>
+  			<i class="fab fa-facebook"></i>
+  			<i class="fab fa-dribbble"></i>
+  			<i class="fab fa-instagram"></i>
+	 	</span><br>
+	 	<ul id="links" class="mt-3">
+	 		<li class=""><a href="aboutus.html">Infos</a></li>
+	 		<li class=""><a href=""><span class="has-text-white">•</span> Support</a></li>
+	 		<li class=""><a href=""><span class="has-text-white">•</span> Contact</a></li>
+	 	</ul>
+	 	<ul id="links" class="mb-3">
+	 		<li class=""><a href="">Terms & conditions</a></li>
+	 		<li class=""><a href=""><span class="has-text-white">•</span> Privacy Policy</a></li>
+	 	</ul>
+	 	<span id="copyright">BTW&Co &copy; <script>document.write(new Date().getFullYear())</script></span>
+	 </footer>
+	 <script type="text/javascript">
+	 	$('input').focus(function(event) {
+		  $(this).closest('.float-label-field').addClass('float').addClass('focus');
+		})
+
+		$('input').blur(function() {
+		  $(this).closest('.float-label-field').removeClass('focus');
+		  if (!$(this).val()) {
+		    $(this).closest('.float-label-field').removeClass('float');
+		  }
+		});
+	 </script>
+</body>
+</html>
