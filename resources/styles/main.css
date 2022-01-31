@@ -216,6 +216,7 @@ input[type="date"]::-webkit-calendar-picker-indicator {
 	width: 100%;
 }
 	.ml-6-tablet{margin-left: 3rem}
+
 @media only screen and (max-width: 768px){
 	#nav {
 		padding-top: 8%;
@@ -269,5 +270,26 @@ input[type="date"]::-webkit-calendar-picker-indicator {
 	}
 	.float-label-field input {
 	  width: 80%;
+	}
+}
+
+@media only screen and (max-width: 330px){
+	body{
+		font-size: 0.7em;
+	}
+	.title{
+		font-size: 1.5rem;
+	}
+	.is-size-6{
+		font-size: 0.75rem!important;
+	}
+	.is-size-5{
+		font-size: 1rem!important;
+	}
+	.is-size-2{
+		font-size: 2rem!important;
+	}
+	.has-text-left .fa-github{
+		font-size: 1.7rem!important
 	}
 }
