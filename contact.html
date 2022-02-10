@@ -48,27 +48,31 @@
 						<div class="columns">
 							<div class="column is-5">
 								<fieldset class='float-label-field'>
-								  <label for="nom">Nom</label>
-								  <input id="nom" type='text'>
-								</fieldset><fieldset class='float-label-field'>
-								  <label for="email">E-mail</label>
-								  <input id="email" type='text'>
-								</fieldset><fieldset class='float-label-field'>
-								  <label for="site">Site internet existant</label>
-								  <input id="site" type='text'>
+								  <small class='has-text-danger is-hidden' id="dnomerror">*Ce champ est obligatoire</small>
+								  <label for="dnom">Nom</label>
+								  <input id="dnom" type='text'>
+								</fieldset>
+								<fieldset class='float-label-field'>
+								  <small class='has-text-danger is-hidden' id="demailerror">*Ce champ est obligatoire</small>
+								  <label for="demail">E-mail</label>
+								  <input id="demail" type='email'>
+								</fieldset>
+								<fieldset class='float-label-field'>
+								  <label for="dsite">Site internet existant</label>
+								  <input id="dsite" type='text'>
 								</fieldset>
 							</div>
 							<div class="column is-2"></div>
 							<div class="column is-5">
 								<fieldset class='float-label-field'>
-								  <label for="societe">Société</label>
-								  <input id="societe" type='text'>
+								  <label for="dsociete">Société</label>
+								  <input id="dsociete" type='text'>
 								</fieldset><fieldset class='float-label-field'>
-								  <label for="tel">Téléphone</label>
-								  <input id="tel" type='text'>
+								  <label for="dtel">Téléphone</label>
+								  <input id="dtel" type='text'>
 								</fieldset><fieldset class='float-label-field'>
-								  <label for="concurent">Concurent principal</label>
-								  <input id="concurent" type='text'>
+								  <label for="dconcurent">Concurent principal</label>
+								  <input id="dconcurent" type='text'>
 								</fieldset>
 							</div>
 						</div>
@@ -77,7 +81,7 @@
 				  				<div class="button px-5 is-rounded gradientbtn active">
 				  					<b class="has-text-white">Continuer</b>
 				  				</div>
-				  				<div class="button px-5 is-rounded gradientbtn grdbtn" onclick="document.getElementById('stscreen').style.display='none';document.getElementById('ndscreen').style.display='block';";>
+				  				<div class="button px-5 is-rounded gradientbtn grdbtn" onclick="desktopFirstValidator()";>
 				  					<b class="has-text-white">Continuer</b>
 				  				</div>
 			  				</div>
@@ -91,36 +95,38 @@
 				<div class="column is-8" style="display:none" id="ndscreen">
 					<div style="display:flex;flex-direction: column;justify-content: space-between;height: 100%;">
 						<b class="has-text-white">Parlez nous de votre projet</b>
+						<small class='has-text-danger is-hidden' id="dcheckerror">*Ce champ est obligatoire</small>
 						<div class="columns">
 							<div class="column is-half">
-								<input type="checkbox" name="">
+								<input type="checkbox" name="dsitech">
 									<label class="has-text-white">Site internet</label><br>
-								<input type="checkbox" name="">
+								<input type="checkbox" name="dseo">
 									<label class="has-text-white">SEO</label><br>
-								<input type="checkbox" name="">
+								<input type="checkbox" name="dmaintenance">
 									<label class="has-text-white">Maintenance</label>
 							</div>
 							<div class="column is-half">
-								<input type="checkbox" name="">
+								<input type="checkbox" name="dbrand">
 									<label class="has-text-white">Brand Identity</label><br>
-								<input type="checkbox" name="">
+								<input type="checkbox" name="dlogo">
 									<label class="has-text-white">Logo</label><br>
-								<input type="checkbox" name="">
+								<input type="checkbox" name="dautre">
 									<label class="has-text-white">Autre</label>
 							</div>
 						</div>
 						<b class="has-text-white">Fixons une date</b>
+						<small class='has-text-danger is-hidden' id="ddateerror">*Ce champ est obligatoire</small>
 						<div class="columns">
 							<div class="column is-half">
 								<fieldset class='float-label-field'>
-								  <label for="debut">Date idéale de debut</label>
-								  <input id="debut" type='Text' onfocus="(this.type='date')" onblur="(this.type='text')">
+								  <label for="ddebut">Date idéale de debut</label>
+								  <input id="ddebut" type='Text' onfocus="(this.type='date')" onblur="dateLimiter(this);(this.type='text')">
 								</fieldset>
 							</div>
 							<div class="column is-half">
 								<fieldset class='float-label-field'>
-								  <label for="fin">Date idéale de fin</label>
-								  <input id="fin" type='text' onfocus="(this.type='date')" onblur="(this.type='text')">
+								  <label for="dfin">Date idéale de fin</label>
+								  <input id="dfin" type='text' onfocus="(this.type='date')" onblur="(this.type='text');dateLimiter(this)">
 								</fieldset>
 							</div>
 						</div>
@@ -129,7 +135,7 @@
 				  				<div class="button px-5 is-rounded gradientbtn active">
 				  					<b class="has-text-white">Continuer</b>
 				  				</div>
-				  				<div class="button px-5 is-rounded gradientbtn grdbtn"  onclick="document.getElementById('ndscreen').style.display='none';document.getElementById('rdscreen').style.display='block';";>
+				  				<div class="button px-5 is-rounded gradientbtn grdbtn"  onclick="desktopSecondValidator()";>
 				  					<b class="has-text-white">Continuer</b>
 				  				</div>
 			  				</div>
@@ -142,28 +148,29 @@
 				<!-- START 3RD SCREEN -->
 				<div class="column is-8" style="display:none" id="rdscreen">
 					<div style="display:flex;flex-direction: column;justify-content: space-between;height: 100%;">
+						<h2 class="has-text-danger is-hidden" id="majordesktop">Y'a eu un probleme, veuillez réessayer plus tard</h2>
 						<b class="has-text-white">Quelque chose à ajouter ?</b>
 						<div class="control">
-						  <textarea class="textarea has-fixed-size" placeholder="Autre chose que nous devrions savoir ?"></textarea>
+						  <textarea class="textarea has-fixed-size" placeholder="Autre chose que nous devrions savoir ?" id="ddescription"></textarea>
 						</div>
 
 						<b class="has-text-white">Parlons budget</b>
 
 						<div class="columns">
 							<div class="column is-half">
-								<input type="checkbox" name="">
+								<input type="radio" name="dbudget" value='Je ne suis pas sûre' checked >
 									<label class="has-text-white">Je ne suis pas sûre</label><br>
-								<input type="checkbox" name="">
+								<input type="radio" name="dbudget" value='1000-5000€'>
 									<label class="has-text-white">1000-5000€</label><br>
-								<input type="checkbox" name="">
+								<input type="radio" name="dbudget" value='10000-20000€'>
 									<label class="has-text-white">10000-20000€</label>
 							</div>
 							<div class="column is-half">
-								<input type="checkbox" name="">
+								<input type="radio" name="dbudget" value='0-1000€'>
 									<label class="has-text-white">0-1000€</label><br>
-								<input type="checkbox" name="">
+								<input type="radio" name="dbudget" value='5000-10000€'>
 									<label class="has-text-white">5000-10000€</label><br>
-								<input type="checkbox" name="">
+								<input type="radio" name="dbudget" value='+ 20000€'>
 									<label class="has-text-white">+ 20000€</label>
 							</div>
 						</div>
@@ -173,7 +180,7 @@
 				  				<div class="button px-5 is-rounded gradientbtn active">
 				  					<b class="has-text-white">Valider</b>
 				  				</div>
-				  				<div class="button px-5 is-rounded gradientbtn grdbtn">
+				  				<div class="button px-5 is-rounded gradientbtn grdbtn" id="validerdesktop">
 				  					<b class="has-text-white">Valider</b>
 				  				</div>
 			  				</div>
@@ -193,10 +200,13 @@
 				<!-- 1ST MOBILE SCREEN -->
 				<div id="stmbscreen">
 					<b class="has-text-white is-size-5">Dites en nous un peu plus sur vous ...</b>
+					  <small class='has-text-danger is-hidden' id="nomerrormb"><br>*Ce champ est obligatoire</small>
 					<fieldset class='float-label-field'>
 					  <label for="nommb" onclick="document.getElementById('nommb').focus()">Nom</label>
 					  <input id="nommb" type='text'>
-					</fieldset><fieldset class='float-label-field'>
+					</fieldset>
+					  <small class='has-text-danger is-hidden' id="emailerrormb">*Ce champ est obligatoire</small>
+					<fieldset class='float-label-field'>
 					  <label for="emailmb" onclick="document.getElementById('emailmb').focus()">E-mail</label>
 					  <input id="emailmb" type='text'>
 					</fieldset><fieldset class='float-label-field'>
@@ -219,7 +229,7 @@
 			  				<div class="button px-5 is-rounded gradientbtn active">
 			  					<b class="has-text-white">Continuer</b>
 			  				</div>
-			  				<div class="button px-5 is-rounded gradientbtn grdbtn" onclick="document.getElementById('stmbscreen').style.display='none';document.getElementById('ndmbscreen').style.display='block';";>
+			  				<div class="button px-5 is-rounded gradientbtn grdbtn" onclick="mobileFirstValidator()";>
 			  					<b class="has-text-white">Continuer</b>
 			  				</div>
 		  				</div>
@@ -231,34 +241,36 @@
 				<div id="ndmbscreen" style="display:none">
 					<b class="has-text-white is-size-5">Parlez nous de votre projet</b>
 					<div class="my-3">
-						<input type="checkbox" name="">
+					  	<small class='has-text-danger is-hidden' id="checkerrormb">*Ce champ est obligatoire<br></small>
+						<input type="checkbox" name="sitechmb">
 							<label class="has-text-white">Site internet</label><br>
-						<input type="checkbox" name="">
+						<input type="checkbox" name="seomb">
 							<label class="has-text-white">SEO</label><br>
-						<input type="checkbox" name="">
+						<input type="checkbox" name="maintenancemb">
 							<label class="has-text-white">Maintenance</label><br>
-							<input type="checkbox" name="">
+							<input type="checkbox" name="brandmb">
 							<label class="has-text-white">Brand Identity</label><br>
-						<input type="checkbox" name="">
+						<input type="checkbox" name="logomb">
 							<label class="has-text-white">Logo</label><br>
-						<input type="checkbox" name="">
+						<input type="checkbox" name="autremb">
 							<label class="has-text-white">Autre</label>
 					</div>
 					<b class="has-text-white is-size-5">Fixons une date</b>
+					<small class='has-text-danger is-hidden' id="dateerrormb"><br>*Ce champ est obligatoire</small>
 					<fieldset class='float-label-field'>
-					  <label for="debut" onclick="document.getElementById('debutmobile').focus()">Date idéale de debut</label>
-					  <input id="debutmobile" type='Text' onfocus="(this.type='date')" onblur="(this.type='text')">
+					  <label for="debutmb" onclick="document.getElementById('debutmb').focus()">Date idéale de debut</label>
+					  <input id="debutmb" type='Text' onfocus="(this.type='date')" onblur="(this.type='text');dateLimiter(this)">
 					</fieldset>
 					<fieldset class='float-label-field'>
-					  <label for="fin">Date idéale de fin</label>
-					  <input id="fin" type='text' onfocus="(this.type='date')" onblur="(this.type='text')">
+					  <label for="finmb">Date idéale de fin</label>
+					  <input id="finmb" type='text' onfocus="(this.type='date')" onblur="(this.type='text');dateLimiter(this)">
 					</fieldset>
 					<div class="has-text-centered py-6">
 						<div style="position:relative;">
 			  				<div class="button px-5 is-rounded gradientbtn active">
 			  					<b class="has-text-white">Continuer</b>
 			  				</div>
-			  				<div class="button px-5 is-rounded gradientbtn grdbtn" onclick="document.getElementById('ndmbscreen').style.display='none';document.getElementById('rdmbscreen').style.display='block';";>
+			  				<div class="button px-5 is-rounded gradientbtn grdbtn" onclick="mobileSecondValidator()";>
 			  					<b class="has-text-white">Continuer</b>
 			  				</div>
 		  				</div>
@@ -270,21 +282,21 @@
 				<div id="rdmbscreen" style="display:none">
 					<b class="has-text-white is-size-5">Quelque chose à ajouter ?</b>
 						<div class="control py-3">
-						  <textarea class="textarea has-fixed-size" placeholder="Autre chose que nous devrions savoir ?"></textarea>
+						  <textarea class="textarea has-fixed-size" placeholder="Autre chose que nous devrions savoir ?" id="descriptionmb"></textarea>
 						</div>
 					<b class="has-text-white is-size-5">Parlons Budget</b>
 					<div class="py-3">
-						<input type="checkbox" name="">
+						<input type="radio" name="budgetmb" checked>
 							<label class="has-text-white">Je ne suis pas sûre</label><br>
-						<input type="checkbox" name="">
-							<label class="has-text-white">1000-5000€</label><br>
-						<input type="checkbox" name="">
-							<label class="has-text-white">10000-20000€</label><br>
-						<input type="checkbox" name="">
+						<input type="radio" name="budgetmb">
 							<label class="has-text-white">0-1000€</label><br>
-						<input type="checkbox" name="">
+						<input type="radio" name="budgetmb">
+							<label class="has-text-white">1000-5000€</label><br>
+						<input type="radio" name="budgetmb">
 							<label class="has-text-white">5000-10000€</label><br>
-						<input type="checkbox" name="">
+						<input type="radio" name="budgetmb">
+							<label class="has-text-white">10000-20000€</label><br>
+						<input type="radio" name="budgetmb">
 							<label class="has-text-white">+ 20000€</label>
 					</div>
 					<div class="has-text-centered py-6">
@@ -292,7 +304,7 @@
 			  				<div class="button px-5 is-rounded gradientbtn active">
 			  					<b class="has-text-white">Valider</b>
 			  				</div>
-			  				<div class="button px-5 is-rounded gradientbtn grdbtn">
+			  				<div class="button px-5 is-rounded gradientbtn grdbtn" id="validermobile">
 			  					<b class="has-text-white">Valider</b>
 			  				</div>
 		  				</div>
@@ -329,7 +341,6 @@
 	 	$('input').focus(function(event) {
 		  $(this).closest('.float-label-field').addClass('float').addClass('focus');
 		})
-
 		$('input').blur(function() {
 		  $(this).closest('.float-label-field').removeClass('focus');
 		  if (!$(this).val()) {
@@ -337,5 +348,95 @@
 		  }
 		});
 	 </script>
+	 <script type="module">
+	 	import { initializeApp } from "https://www.gstatic.com/firebasejs/9.6.6/firebase-app.js";
+import { getDatabase, ref, set } from "https://www.gstatic.com/firebasejs/9.6.6/firebase-database.js"
+
+const firebaseConfig = {
+    apiKey: "AIzaSyBFcQwauBnSYBWS7jBzIdZvkVLteQScvNo",
+    authDomain: "btw-co.firebaseapp.com",
+    databaseURL: "https://btw-co-default-rtdb.europe-west1.firebasedatabase.app",
+    projectId: "btw-co",
+    storageBucket: "btw-co.appspot.com",
+    messagingSenderId: "274287441957",
+    appId: "1:274287441957:web:118a8db1a36b7234cf67cc"
+};
+
+const app = initializeApp(firebaseConfig);
+const database = getDatabase(app);
+function writeUserData(userId, nom,email,siteex,societe,telephone,concurent,
+		site,seo,maintenance,brand,logo,autre,debut,fin,description,budget) {
+  const db = getDatabase();
+  set(ref(db, 'contacts/' + userId), {
+    name: nom,
+    email: email,
+    site_existant: siteex,
+    societe: societe,
+    telephone: telephone,
+    concurent: concurent,
+    site: site,
+    seo: seo,
+    maintenance:maintenance,
+    brand_identity:brand,
+    logo:logo,
+    autre:autre,
+    date_debut:debut,
+    date_fin:fin,
+    description:description,
+    budget:budget})
+  	.then(() => {window.location.href = "index.html";})
+	.catch((error) => {document.getElementById('majordesktop').classList.remove("is-hidden")});
+}
+
+
+document.getElementById("validerdesktop").addEventListener("click", desktopSubmit);
+
+function desktopSubmit(){
+	writeUserData(
+		Date.now(),
+		$('#dnom').val(),
+		$('#demail').val(),
+		$('#dsite').val(),
+		$('#dsociete').val(),
+		$('#dtel').val(),
+		$('#dconcurent').val(),
+		$('input[name="dsitech"]').is(":checked"),
+		$('input[name="dseo"]').is(":checked"),
+		$('input[name="dmaintenance"]').is(":checked"),
+		$('input[name="dbrand"]').is(":checked"),
+		$('input[name="dlogo"]').is(":checked"),
+		$('input[name="dautre"]').is(":checked"),
+		$('#ddebut').val(),
+		$('#dfin').val(),
+		$('#ddescription').val(),
+		$("input[name='dbudget']:checked").val()
+	)
+}
+
+document.getElementById("validermobile").addEventListener("click", mobileSubmit);
+
+function mobileSubmit(){
+	writeUserData(
+		Date.now(),
+		$('#nommb').val(),
+		$('#emailmb').val(),
+		$('#sitemb').val(),
+		$('#societemb').val(),
+		$('#telmb').val(),
+		$('#concurentmb').val(),
+		$('input[name="sitechmb"]').is(":checked"),
+		$('input[name="seomb"]').is(":checked"),
+		$('input[name="maintenancemb"]').is(":checked"),
+		$('input[name="brandmb"]').is(":checked"),
+		$('input[name="logomb"]').is(":checked"),
+		$('input[name="autremb"]').is(":checked"),
+		$('#debutmb').val(),
+		$('#finmb').val(),
+		$('#descriptionmb').val(),
+		$("input[name='budgetmb']:checked").val()
+	)
+}
+	 </script>
+	 <script src='resources/scripts/contactscript.js'></script>
 </body>
 </html>
