@@ -6,14 +6,12 @@
 		<meta charset="UTF-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 		<meta http-equiv="X-UA-Compatible" content="IE=Edge">
-
 		<link rel="dns-prefetch" href="https://fonts.googleapis.com">
-
 		<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Rubik:300,400,500" type="text/css" media="all">
 		<link rel="stylesheet" type="text/css" href="main.css">
 
 	</head>
-	<body class="js-inactive site-scroll--inactive page-home">
+	<body class="js-inactive site-scroll--inactive page-my-projects">
 		<script type="text/javascript">
 			// Class for animations
 			document.body.classList.add('animations-enabled');
@@ -22,7 +20,7 @@
 		<header class="site-header site-header--dark">
 			<div class="site-header__inner anim anim-down anim-fade">
 				<div class="site-header__section site-header__section--logo">
-					<a class="site-logo" href="#">
+					<a class="site-logo" href="index">
 						Messaoudi A
 					</a>
 				</div>
@@ -35,7 +33,7 @@
 						<nav class="site-menu">
 							<ul class="site-menu__inner">
 									<li class="site-menu__item">
-										<a class="site-menu__link " href="projects">
+										<a class="site-menu__link active" href="projects">
 											Projects
 										</a>
 									</li>
@@ -52,51 +50,30 @@
 							</ul>
 						</nav>
 					</div>
-				
 			</div>
 		</header>
 
-<section class="site-banner site-banner--dark site-banner--alt">
+<section class="site-banner site-banner--dark">
 	<div class="site-banner__inner anim anim-up anim-fade">
 		<div class="site-banner__content">
-			
 				<h1 class="site-banner__title">
-					Hey, I’m Abderraouf.
+					My Projects
 				</h1>
 			
 				<h2 class="site-banner__subtitle">
-					A young and passionate Full Stack Web Dev, Always eager to try new things and take on challenges.
-				</h2>
-			
-				<div class="site-banner__btn">
-					<a class="btn btn--large btn--hover-light" href="projects">
-						My Projects
-					</a>
-				</div>
-			
+					I've been creating websites for more than 3 years, Here are some of my favorites.
+				</h2>			
 		</div>
-			<figure class="overlap-img">
-				<picture>
-					<source srcset="portrait.jpg" media="(min-width: 901px)">
-					<source srcset="portrait.jpg" media="(max-width: 900px) and (min-width: 376px)">
-					<source srcset="portrait.jpg" media="(max-width: 375px)">
-					<img srcset="portrait.jpg">
-				</picture>
-			</figure>
-		
 	</div>
 </section>
-<section class="section section--large spacing-huge">
-	<div class="spacing-small-bottom">
-		<h2 class="section-title">
-			Featured Project
-		</h2>
-	</div>
+
+<section class="section section--large spacing-huge-top">
+		<div class="spacing-huge-bottom">
 <article class="project-preview ">
 	<div class="project-preview__img">
 		<figure class="overlap-img">
 			<a href="medmgmt">
-				<img src="medmgmt.png" alt="Cazz Photography">
+				<img src="medmgmt.png" alt="Medical Management">
 			</a>
 		</figure>
 	</div>
@@ -106,16 +83,62 @@
 			
 				<h2>
 					<a href="medmgmt">
-						Medical Management
+						Medical Managememnt
 					</a>
 				</h2>
 					<p class="txt-large">
 						A digital solution that takes care of all the additional work a doctor has to do.
 					</p>
 		</div>
-			
 				<div class="spacing-tiny-top">
 					<ul class="icon-list">
+							<li class="icon-list__item">
+								<span class="icon-list__img">
+									<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20'><path d='M7 17H2a2 2 0 0 1-2-2V2C0 .9.9 0 2 0h16a2 2 0 0 1 2 2v13a2 2 0 0 1-2 2h-5l4 2v1H3v-1l4-2zM2 2v11h16V2H2z'/></svg>
+								</span>
+								Web Design
+							</li>			
+							<li class="icon-list__item">
+								<span class="icon-list__img">
+									<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20'><path d='M.7 9.3l4.8-4.8 1.4 1.42L2.84 10l4.07 4.07-1.41 1.42L0 10l.7-.7zm18.6 1.4l.7-.7-5.49-5.49-1.4 1.42L17.16 10l-4.07 4.07 1.41 1.42 4.78-4.78z'/></svg>
+								</span>
+								Dynamic Site Development
+							</li>
+					</ul>
+				</div>
+				<div class="spacing-tiny-top">
+					<a class="btn" href="medmgmt">
+						View Details
+					</a>
+				</div>
+	</div>
+</article>
+		</div>
+		<div class="spacing-huge-bottom">
+<article class="project-preview project-preview--reverse">
+	<div class="project-preview__img">
+		<figure class="overlap-img">
+			<a href="weather/index">
+				<img src="weather.png" alt="Weather">
+			</a>
+		</figure>
+	</div>
+
+	<div class="project-preview__content">
+		<div class="content-styles">
+			
+				<h2>
+					<a href="weather/index">
+						Weather App
+					</a>
+				</h2>
+					<p class="txt-large">
+						A simple web app that shows the weather and takes advantage of Apis.
+					</p>
+		</div>
+				<div class="spacing-tiny-top">
+					<ul class="icon-list">
+						
 							<li class="icon-list__item">
 								<span class="icon-list__img">
 									<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20'><path d='M7 17H2a2 2 0 0 1-2-2V2C0 .9.9 0 2 0h16a2 2 0 0 1 2 2v13a2 2 0 0 1-2 2h-5l4 2v1H3v-1l4-2zM2 2v11h16V2H2z'/></svg>
@@ -127,95 +150,127 @@
 								<span class="icon-list__img">
 									<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20'><path d='M.7 9.3l4.8-4.8 1.4 1.42L2.84 10l4.07 4.07-1.41 1.42L0 10l.7-.7zm18.6 1.4l.7-.7-5.49-5.49-1.4 1.42L17.16 10l-4.07 4.07 1.41 1.42 4.78-4.78z'/></svg>
 								</span>
-								Dynamic Site Development
+								Web App Development
 							</li>
 						
 					</ul>
 				</div>
-			
 				<div class="spacing-tiny-top">
-					<a class="btn" href="medmgmt">
-						View Details
+					<a class="btn" href="weather/index">
+						Live Version
 					</a>
 				</div>
 	</div>
 </article>
-</section>
-	<section class="bg-grey-stripes bg-slanted">
-		<div class="section section--small spacing-huge">
-			<blockquote class="quote">
-				
-					<div class="quote__inner">
-						<p class="quote__txt">The platform was on point, It did all what was required and more. I am certainly pleased with the final result, It was simple and easy to use yet powerful.*</p>
-					</div>
-				<cite class="quote__meta">
-					<img src="images.png" alt="Chris Fenwick">
-					<strong>
-						Dr Meziane
-					</strong>
-					Medecin de Travail<br>
-				</cite>
-					<small>*The quote was translated from another language</small>
-			</blockquote>
+
 		</div>
-	</section>
 
+		<div class="spacing-huge-bottom">
+			
 
-<section class="section section--large spacing-huge">
-	<div class="spacing-small-bottom">
-		<h2 class="section-title">
-			My Services
-		</h2>
+<article class="project-preview project-preview--reverse">
+	<div class="project-preview__img">
+		<figure class="overlap-img">
+			<a href="https://github.com/Raouf06/Django-ChatApp">
+				<img src="chat.png" alt="Django Channels Chat">
+			</a>
+		</figure>
 	</div>
 
-	<div class="grid grid--tb1-2 grid--m-1">
-		
-			<div class="grid__col grid__col--6">
-				<div class="service txt-center">
-	
-		<span class="service__icon">
-			<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20'><path d='M11 9.27V0l6 11-4 6H7l-4-6L9 0v9.27a2 2 0 1 0 2 0zM6 18h8v2H6v-2z'/></svg>
-		</span>
-	<div class="content-styles">
-			<h3 class="h4">
-				Web Design
-			</h3>
-			<p class="txt-large txt-dark">
-				User Focused
-			</p>
-			<p>
-				A website should be designed for the people who will use it, so that's exactly what I do. User focused design should be the primary goal of any website.
-			</p>	
+	<div class="project-preview__content">
+		<div class="content-styles">
+			
+				<h2>
+					<a href="https://github.com/Raouf06/Django-ChatApp">
+						Django Chat App
+					</a>
+				</h2>
+					<p class="txt-large">
+						Usage of ASGI to create a Real-Time chat app using Django.
+					</p>
+		</div>
+			
+				<div class="spacing-tiny-top">
+					<ul class="icon-list">
+						
+							<li class="icon-list__item">
+								<span class="icon-list__img">
+									<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20'><path d='M7 17H2a2 2 0 0 1-2-2V2C0 .9.9 0 2 0h16a2 2 0 0 1 2 2v13a2 2 0 0 1-2 2h-5l4 2v1H3v-1l4-2zM2 2v11h16V2H2z'/></svg>
+								</span>
+								Network design
+							</li>
+						
+							<li class="icon-list__item">
+								<span class="icon-list__img">
+									<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20'><path d='M.7 9.3l4.8-4.8 1.4 1.42L2.84 10l4.07 4.07-1.41 1.42L0 10l.7-.7zm18.6 1.4l.7-.7-5.49-5.49-1.4 1.42L17.16 10l-4.07 4.07 1.41 1.42 4.78-4.78z'/></svg>
+								</span>
+								Web app Development
+							</li>
+						
+					</ul>
+				</div>
+				<div class="spacing-tiny-top">
+					<a class="btn" href="https://github.com/Raouf06/Django-ChatApp">
+						Project on Github
+					</a>
+				</div>
 	</div>
-</div>
-			</div>
-		
-			<div class="grid__col grid__col--6">
-				<div class="service txt-center">
-	
-		<span class="service__icon">
-			<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20'><path d='M7 17H2a2 2 0 0 1-2-2V2C0 .9.9 0 2 0h16a2 2 0 0 1 2 2v13a2 2 0 0 1-2 2h-5l4 2v1H3v-1l4-2zM2 2v11h16V2H2z'/></svg>
-		</span>
-	
-	<div class="content-styles">
-		
-			<h3 class="h4">
-				Web Development
-			</h3>
-		
-			<p class="txt-large txt-dark">
-				Responsive and Fast
-			</p>
-		
-			<p>
-				Every website should be built with two primary goals: Firstly, it needs to work across all devices. Secondly, it needs to be fast as possible.
-			</p>
+</article>
+
+		</div>
+
+		<div class="spacing-huge-bottom">
+<article class="project-preview project-preview--reverse">
+	<div class="project-preview__img">
+		<figure class="overlap-img">
+			<a href="index">
+				<img src="portfolio.png" alt="Portfolio">
+			</a>
+		</figure>
+	</div>
+
+	<div class="project-preview__content">
+		<div class="content-styles">
+			
+				<h2>
+					<a href="index">
+						My Portfolio
+					</a>
+				</h2>
+					<p class="txt-large">
+						A portfolio to showcase my previous work and favorite projects.
+					</p>
+		</div>
+				<div class="spacing-tiny-top">
+					<ul class="icon-list">
+						
+							<li class="icon-list__item">
+								<span class="icon-list__img">
+									<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20'><path d='M7 17H2a2 2 0 0 1-2-2V2C0 .9.9 0 2 0h16a2 2 0 0 1 2 2v13a2 2 0 0 1-2 2h-5l4 2v1H3v-1l4-2zM2 2v11h16V2H2z'/></svg>
+								</span>
+								Responsive Web Design
+							</li>
+						
+							<li class="icon-list__item">
+								<span class="icon-list__img">
+									<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20'><path d='M.7 9.3l4.8-4.8 1.4 1.42L2.84 10l4.07 4.07-1.41 1.42L0 10l.7-.7zm18.6 1.4l.7-.7-5.49-5.49-1.4 1.42L17.16 10l-4.07 4.07 1.41 1.42 4.78-4.78z'/></svg>
+								</span>
+								Static Site Development
+							</li>
+						
+					</ul>
+				</div>
+				<div class="spacing-tiny-top">
+					<a class="btn" href="index">
+						Visit Home
+					</a>
+				</div>
+			
 		
 	</div>
-</div>
-			</div>
-		
-	</div>
+</article>
+		</div>
+	
 </section>
 		<section class="site-cta">
 			<div class="site-cta__inner">
